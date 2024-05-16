@@ -1,0 +1,24 @@
+---
+# vars file for web
+j2: nour
+
+# ---------------- #
+
+update_cache: true
+
+# ---------------- #
+
+package_nginx: {name: "nginx", state: "present"}
+package_mariadb: {name: "mariadb-server", state: "latest"}
+package_curl: {name: "curl", state: "absent"}
+package_vim: {name: "vim", state: "present"}
+my_packages:
+  - {name: "nginx", state: "present"}
+  - {name: "mariadb-server", state: "latest"}
+  - {name: "curl", state: "absent"}
+
+# ---------------- #
+
+file_names:
+  - styles.css
+  - script.js
